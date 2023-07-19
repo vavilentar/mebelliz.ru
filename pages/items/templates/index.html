@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="./letter-m.ico" type="image/x-icon">
+	<link rel="stylesheet" href="./style.css">
+	<title>Mebelliz - шкафы</title>
+</head>
+
+<body>
+
+	<div id="up"><a href="#header"><img src="../../../icons/up.svg" alt=""></a></div>
+	<div id="form-wrapper" class="callback-form_hidden">
+		<form id="callback" class="callback-form callback-form_hidden">
+			<div id="close-form_btn"><img src="../../../icons/x.svg" alt=""></div>
+			<div class="form-call">
+				<div>
+					<label>Имя <span>*</span></label>
+					<input type='text' name="client-name" id="client-name" required>
+				</div>
+				<div>
+					<label>Номер телефона (с кодом) <span>*</span></label>
+					<input type="phone" name="client-phone" id="client-phone" required>
+				</div>
+				<div>
+					<label>Электронная почта</label>
+					<input type="mail" name="client-mail" id="client-mail">
+				</div>
+				<div>
+					<label>Сообщение</label>
+					<input name="client-request" id="client-request">
+				</div>
+				<input id="callback-send" class="bot-send-mail" type='submit' value='Оставить заявку'>
+			</div>
+		</form>
+	</div>
+
+	<header id="header">
+		<div class="header">
+			<ul class="navbar navbar__container>
+				<li class=" navbar-item">
+				<div class="navbar-logotype">
+					<div class="logo-text">
+						<a href="../../../index.html">
+							<h2>Mebelliz</h2>
+						</a>
+					</div>
+				</div>
+				</li>
+				<li class="navbar-item">
+					<a href="../../../index.html#catalogue" id="catalogue-link">Каталог</a>
+				</li>
+				<li class="navbar-item">
+					<p>
+						Отвечаем на звонки <br> <span>с 9:00 до 21:00</span> <br> без выходных
+					</p>
+				</li>
+				<li class="navbar-item">
+					<a href="#"><img src="../../../icons/whatsapp.svg" alt=""></a>
+					<a href="#"><img src="../../../icons/telegram.svg" alt=""></a>
+					<a href="mailto:info@mebelliz.ru"><img src="../../../icons/mail.svg" alt=""></a>
+				</li>
+				<li class="navbar-item">
+					<a href="tel:+79296618949">+7 (929) 661-89-49</a>
+					<a class="callback-show" href="#">Вам перезвонить?</a>
+				</li>
+			</ul>
+			<ul class="menu menu__container">
+				<li class="menu-link"><a href="../../../index.html#materials_app">Материалы</a></li>
+				<li class="menu-link"><a href="../../../index.html#catalogue">Наши работы</a></li>
+				<li class="menu-link"><a href="../../../index.html#steps">Как заказать</a></li>
+				<li class="menu-link"><a href="../../designersPage/for-designers.html">Дизайнерам</a></li>
+				<li class="menu-link"><a href="#contacts">Контакты</a></li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<div class="collection collection__container">
+			<h1 class="collection-title">Купить шкафы от производителя <br> <span>и по дизайнерским проектам</span>
+			</h1>
+			<div id="collection" class="collection-tabs">
+				<div v-for="(item, index) in collectionList" class="collection-item">
+					<img :src="item.photo" alt="">
+					<div class="collection-item_titles">
+						<h2 class="item-title">{{ item.name }}</h2>
+						<h3 class="material-title">{{ item.material }}</h3>
+					</div>
+					<button class="btn"><a href="#">Оставить заявку</a></button>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="wrapper-footer">
+			<div class="footer footer__container">
+				<div class="contacts">
+					<h2>Изготовление мебели на заказ <br> и по дизайнерским проектам</h2>
+
+					<h4>Контакты:</h4>
+					<a href="tel:+79296618949">+7 (929) 661-89-49</a>
+					<div class="social-footer">
+						<a href="#"><img src="../../../icons/whatsapp.svg" alt=""></a>
+						<a href="#"><img src="../../../icons/telegram.svg" alt=""></a>
+					</div>
+					<a href="mailto:info@mebelliz.ru">info@mebelliz.ru</a>
+					<p><span>Режим работы:</span> ежедневно с 11-00 до 20-00</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<script src="../../../js/jquery.js"></script>
+	<script src="../../../js/modal.js"></script>
+	<script src="./script.js"></script>
+</body>
+
+</html>

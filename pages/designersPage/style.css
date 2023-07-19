@@ -1,0 +1,160 @@
+/*Imports*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800);
+@import url(../../../css/headerFooter.css);
+@import url(../../../css/responsive.css);
+
+:root {
+	--main-color: #5CCCCC;
+	--main-hover-color: #006561;
+	--main-black-color: #252525;
+}
+.designers {
+	display: grid;
+	grid-template-columns: 600px 400px;
+	width: fit-content;
+	height: fit-content;
+	margin: 50px auto;
+	column-gap: 25px;
+}
+
+.designers h1 {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.callback-form {
+	width: 100%;
+}
+
+.form-call {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 0 20px;
+	box-sizing: border-box;
+	row-gap: 10px;
+}
+
+.form-zvonok div {
+	padding: 15px 0;
+}
+
+.bot-send-mail {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.form-call label,
+.form-call input {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.form-call label {
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.form-call input {
+	padding: 10px 15px;
+	margin-top: 10px;
+	border: 1px solid var(--main-black-color);
+	border-radius: 5px;
+}
+
+.form-call label span {
+	color: red;
+}
+
+.form-call .bot-send-mail {
+	font-family: 'Open Sans';
+	font-size: 14px;
+	padding: 15px;
+	margin-top: 10px;
+	background: none;
+	border: none;
+	color: #252525;
+	cursor: pointer;
+	border: 1px var(--main-black-color) solid;
+	border-radius: 5px;
+}
+
+.callback-form textarea {
+	width: 100%;
+	resize: none;
+	padding: 10px 15px;
+	margin-top: 10px;
+	border: 1px solid var(--main-black-color);
+	border-radius: 5px;
+	height: 250px;
+}
+
+#catalogue-link {
+	font-size: 24px;
+	color: var(--main-color);
+}
+
+.wrapper-footer {
+	background-color: var(--main-color);
+}
+
+/* .footer {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	padding: 20px 0;
+} */
+
+.contacts a,
+.contacts p,
+.contacts h2,
+.contacts h4 {
+	color: white;
+}
+
+.contacts {
+	display: flex;
+	flex-direction: column;
+	height: fit-content;
+	justify-content: center;
+	row-gap: 20px;
+	width: calc(100% - 30px);
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.contacts h2 {
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 137%;
+}
+
+.contacts h4 {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 137%;
+}
+
+.personal_agree {
+	display: grid;
+	grid-template-columns: 0.2fr 0.8fr;
+}
+
+.check_agree {
+	width: 25px;
+	height: 25px;
+}
+
+.agreement_link {
+	color: #5CCCCC;
+	text-decoration: underline;
+}
+
+@media (max-width: 426px) {
+	.designers {
+		display: flex;
+		flex-direction: column;
+	}
+}

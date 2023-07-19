@@ -1,0 +1,272 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800);
+
+:root {
+	--main-color: #5CCCCC;
+	--main-hover-color: #006561;
+	--main-black-color: #252525;
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	font-weight: inherit;
+	font-size: inherit;
+	color: var(--main-black-color)
+}
+
+a {
+	text-decoration: none;
+	color: var(--main-black-color)
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+[class*="__container"] {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+body,
+html {
+	scroll-behavior: smooth;
+	font-family: 'Open Sans';
+}
+
+button {
+	cursor: pointer;
+	color: var(--main-black-color);
+	font-family: 'Open Sans';
+	transition: background-color .3s ease-in-out;
+}
+
+button:hover {
+	background-color: var(--main-hover-color)
+}
+
+/*Other styles*/
+
+header {}
+
+.header {
+	height: fit-content;
+	padding: 20px 0;
+	background-color: rgba(255, 255, 255, 0.8);
+
+}
+
+.navbar {
+	height: 100%;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	grid-template-columns: repeat(5, 1fr);
+
+}
+
+.navbar-item {
+	height: 100px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.navbar-logotype {
+	display: flex;
+	width: fit-content;
+	height: 100px;
+	align-items: center;
+}
+
+.logo-text {
+	text-transform: uppercase;
+}
+
+.logo-text a h2 {
+	color: var(--main-color);
+	font-size: 30px;
+	text-align: center;
+	line-height: 26px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.btn {
+	padding: 17px 18px;
+	background-color: var(--main-color);
+	color: white;
+	border-radius: 5px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 100%;
+}
+
+.btn a {
+	display: flex;
+	color: white;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.category-btn {
+	padding: 0;
+	width: 200px;
+	height: 40px;
+}
+
+.navbar-item:nth-child(4) {
+	gap: 15px;
+}
+
+.navbar-item:nth-child(5) {
+	flex-direction: column;
+	row-gap: 5px;
+}
+
+.navbar-item:nth-child(5) a:nth-child(2),
+.step p a {
+	color: var(--main-color);
+	text-decoration: underline;
+}
+
+.navbar-item:nth-child(2):before,
+.navbar-item:nth-child(3):before,
+.navbar-item:nth-child(3):after,
+.navbar-item:nth-child(4)::after {
+	content: '';
+	position: absolute;
+	height: 70%;
+	width: 1px;
+	top: 50%;
+	background-color: var(--main-color);
+	transform: translateY(-50%);
+}
+
+
+.navbar-item::before {
+	left: 0;
+}
+
+.navbar-item::after {
+	right: 0;
+}
+
+.menu {
+	display: flex;
+	height: 50px;
+	justify-content: space-around;
+	align-items: center;
+	position: relative;
+}
+
+.menu::after {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 2px;
+	background-color: var(--main-color);
+	bottom: 0;
+}
+
+.menu-link a {
+	font-size: 20px;
+	line-height: 27px;
+	text-transform: uppercase;
+	transition: color .2s ease-in-out;
+}
+
+.menu-link:hover a {
+	color: var(--main-color);
+}
+
+.wrapper-footer {
+	background-color: var(--main-color);
+}
+
+.footer {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	padding: 20px;
+}
+
+.contacts a,
+.contacts p,
+.contacts h2,
+.contacts h4 {
+	color: white;
+}
+
+.contacts {
+	display: flex;
+	flex-direction: column;
+	height: fit-content;
+	justify-content: center;
+	row-gap: 20px;
+	width: calc(100% - 30px);
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.contacts h2 {
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 137%;
+}
+
+.contacts h4 {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 137%;
+}
+
+#catalogue-link {
+	font-size: 24px;
+	color: var(--main-color);
+}
+
+#up {
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	cursor: pointer;
+	width: fit-content;
+	height: fit-content;
+
+	background-color: white;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+
+#hamburger-btn {
+	position: fixed;
+	right: 25px;
+	top: 25px;
+	z-index: 20;
+}
