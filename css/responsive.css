@@ -1,8 +1,6 @@
-
 #hamburger-btn {
 	display: none;
 }
-
 
 @media (max-width: 769px) {
 	.navbar {
@@ -64,8 +62,8 @@
 	.categories_app-item {
 		width: 40%;
 	}
-
 }
+
 
 @media (max-width: 426px) {
 	.header {
@@ -213,16 +211,17 @@
 		position: fixed;
 		height: fit-content;
 		width: 100vw;
-		background-color: white;
+		background-color: #94ffff;
 		z-index: 15;
 		flex-direction: column;
 		top: 0;
 		left: 0;
 		row-gap: 25px;
-		padding: 25px 0;
+		padding: 25px;
 		align-items: flex-start;
 		display: none;
 	}
+
 	.menu-show {
 		display: flex;
 	}

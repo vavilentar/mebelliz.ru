@@ -152,9 +152,11 @@
 	text-decoration: underline;
 }
 
-@media (max-width: 426px) {
+
+@media (max-width: 1024px) {
 	.designers {
-		display: flex;
-		flex-direction: column;
+		grid-template-columns: 1fr;
+		gap: 50px;
+		padding: 0 25px;
 	}
 }
